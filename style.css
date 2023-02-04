@@ -1,0 +1,139 @@
+@import url('https://fonts.googleapis.com/css2?family=Josefin+Sans:wght@300;400;600&display=swap');
+
+:root{
+    --DesaturatedRed: hsl(0, 36%, 70%);
+   --SoftRed: hsl(0, 93%, 68%);
+   --DarkGrayishRed: hsl(0, 6%, 24%);
+   /*Linear, 135deg, from hsl(0, 0%, 100%), to hsl(0, 100%, 98%)
+   - Linear, 135deg, from hsl(0, 80%, 86%), to hsl(0, 74%, 74%)
+   */
+   --Fontsize: 16px;
+
+}
+
+
+*{
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+}
+
+
+body{
+    height: 100vh;
+    font-family: 'Josefin Sans', sans-serif;
+}
+
+
+.container{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+}
+
+.right  {
+    background: url("/images/hero-desktop.jpg");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 100vh;
+}
+
+
+/************** left side*************/
+.left{
+    padding: 1rem;
+    display: grid;
+    justify-content: center;
+    height: 85vh;
+    width: 60vw;
+    align-items: center;
+
+}
+
+.text {
+    padding: 0.5rem;
+    width: 40vw;
+}
+.left h1, p{
+    margin: 1rem 0;
+}
+
+
+.left h1{
+    font-size:62px;
+    color: var(--DarkGrayishRed);
+}
+
+.left h1 span,  p {
+    color: var(--DesaturatedRed);
+    font-weight: 300;
+}
+
+
+.input {
+    margin: 0;
+    padding:0;
+}
+
+.left input {
+    font-family:'Josefin Sans', sans-serif ;
+    padding: 0.7rem 1.5rem;
+    border-radius: 20px;
+    border: 2px solid var(--DesaturatedRed);
+    width: 70%;
+    color: var(--DesaturatedRed);
+
+}
+
+ .submit {
+    background: linear-gradient( hsl(0, 80%, 86%),hsl(0, 74%, 74%)) ;
+    padding: 0.7rem 1.5rem;
+    border-radius:20px ;
+    /* transform: translateY(27%); */
+    cursor: pointer;
+    border: none;
+}
+
+
+
+.error img {
+    position: absolute;
+    margin-left: 0.5rem;
+    margin-top: 0.7rem;
+
+}
+
+.error-message{
+    color: var(--SoftRed);
+}
+
+.hide {
+    display: none;
+}
+
+/****************** media**************************/
+ @media  screen and (max-width:650px) {
+    .left{
+        display:flex;
+        flex-direction: column;
+        height: 100vh;
+        width: 100vw;
+        padding: 0;
+    }
+
+
+
+    .img-phone {
+        background-image: url("/images/hero-mobile.jpg");
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100%;
+        height: 250px;
+        margin: 0.7rem 0;
+    }
+  
+
+    .text {
+        padding: 0.5rem;
+        width: 80vw;
+    }
+ }
